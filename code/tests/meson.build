@@ -5,8 +5,8 @@ if get_option('with_test').enabled()
     test_cases = ['tls']
 
     foreach cases : test_cases
-        # test_c += ['cases' / 'test_' + cases + '.c']
-        # test_c += ['cases' / 'test_' + cases + '.cpp']
+        test_c += ['cases' / 'test_' + cases + '.c']
+        test_c += ['cases' / 'test_' + cases + '.cpp']
     endforeach
 
     pizza_c = executable('testbed-c', test_c, include_directories: dir,
